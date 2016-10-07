@@ -1,99 +1,95 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.openntf.xworlds.oda</groupId>
+
+	<parent>
+		<groupId>org.openntf.xworlds</groupId>
+		<artifactId>org.openntf.xworlds.build</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../org.openntf.xworlds.build/pom.xml</relativePath>
+	</parent>
+
 	<artifactId>org.openntf.xworlds.oda</artifactId>
-	<packaging>bundle</packaging>
+	<version>3.0.0-SNAPSHOT</version>
+	<packaging>eclipse-plugin</packaging>
+
 	<dependencies>
-		<dependency>
-			<groupId>org.openntf.xworlds.dominodeps</groupId>
-			<artifactId>org.openntf.xworlds.dominodeps</artifactId>
-			<version>${project.version}</version>
-			<type>bundle</type>
-			<scope>provided</scope>
-		</dependency>
 		<dependency>
 			<groupId>org.openntf.domino</groupId>
 			<artifactId>com.google.guava</artifactId>
+			<version>18.0.0-SNAPSHOT</version>
 		</dependency>
-				<dependency>
+		<dependency>
 			<groupId>org.openntf.domino</groupId>
 			<artifactId>jsr305</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openntf.domino</groupId>
 			<artifactId>javolution</artifactId>
+			<version>6.1.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openntf.domino</groupId>
 			<artifactId>javassist</artifactId>
+			<version>3.18.2-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openntf.domino</groupId>
 			<artifactId>com.tinkerpop</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.openntf.domino</groupId>
-			<artifactId>org.openntf.domino</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.openntf.domino</groupId>
-			<artifactId>org.openntf.formula</artifactId>
+			<version>2.6.0-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.felix</groupId>
-				<artifactId>maven-bundle-plugin</artifactId>
-				<version>2.3.7</version>
-				<extensions>true</extensions>
+				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
 					<execution>
-						<id>set_failok</id>
 						<goals>
-							<goal>manifest</goal>
+							<goal>copy-dependencies</goal>
 						</goals>
 						<configuration>
-							<instructions>
-								<_failok>true</_failok>
-							</instructions>
+							<excludeGroupIds>p2.eclipse-plugin</excludeGroupIds>
+							<excludeScope>provided</excludeScope>
+							<outputDirectory>${basedir}/BundleContent</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<manifestLocation>BundleContent/META-INF</manifestLocation>
-					<rebuildBundle>true</rebuildBundle>
-					<instructions>
-						<Bundle-SymbolicName>org.openntf.xworlds.oda</Bundle-SymbolicName>
-						<Built-By>Daniele Vistalli</Built-By>
-						<Bundle-Name>org.openntf.xworlds.oda</Bundle-Name>
-						<Bundle-Creator>Factor-y S.r.l.</Bundle-Creator>
-						<Bundle-Version>${project.version}</Bundle-Version>
-						<Bundle-Vendor>OpenNTF Org</Bundle-Vendor>
-						<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
-						<Bundle-RequiredExecutionEnvironment>JavaSE-1.6</Bundle-RequiredExecutionEnvironment>
-						<Manifest-Version>1.0</Manifest-Version>
-						<Embed-Dependency>*;scope=compile|runtime;inline=false</Embed-Dependency>
-						<!-- <Export-Package>*</Export-Package> -->
-						<_exportcontents>*</_exportcontents>
-					</instructions>
-				</configuration>
 			</plugin>
+
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.0</version>
-				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<id>rename-resources</id>
+						<phase>process-resources</phase>
+						<configuration>
+							<target>
+								<!-- copy renamed files. -->
+								<copy todir="${project.basedir}/BundleContent">
+									<fileset dir="${oda}">
+										<include name="org.openntf.domino_3.0.0.*.jar" />
+										<include name="org.openntf.formula_3.0.0.*.jar" />
+									</fileset>
+ 									<mapper type="regexp" from="^(.*)_(\d\.\d\.\d)\.(.*)\.jar$$" to="\1_\2.jar" /> 
+								</copy>
+							</target>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
+
 		</plugins>
+
 	</build>
-	<parent>
-		<groupId>org.openntf.xworlds.feature</groupId>
-		<artifactId>org.openntf.xworlds.feature</artifactId>
-		<version>2.0.1-SNAPSHOT</version>
-		<relativePath>../org.openntf.xworlds.feature</relativePath>
-	</parent>
+
+
 </project>

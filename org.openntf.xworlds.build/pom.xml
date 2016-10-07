@@ -1,0 +1,111 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.openntf.xworlds</groupId>
+	<artifactId>org.openntf.xworlds.build</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>../org.openntf.xworlds.dominodeps</module>
+		<module>../org.openntf.xworlds.oda</module>
+		<module>../org.openntf.xworlds.core</module>
+		<!-- <module>../org.openntf.xworlds.features.server</module> -->
+	</modules>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho-version>0.26.0</tycho-version>
+		<tycho.extras.version>${tycho-version}</tycho.extras.version>
+		<compiler>1.8</compiler>
+		<notes.path>c:/Lotus/Notes</notes.path>
+		<oda>c:/_work/_GIT/oda_mj/domino/org.openntf.domino.updatesite/target/site/plugins</oda>
+	</properties>
+
+	<build>
+
+		<!-- When running server from Eclipse, we need to tell m2e to execute maven-antrun-plugin 
+			to rename files, by default it doesn't. We need to modify the life cycle 
+			mapping. -->
+		<pluginManagement>
+			<plugins>
+				<!-- This plugin is not a real one, it is only used by m2e to obtain 
+					config information. This is why it needs to be put in the section pluginManagement, 
+					otherwise Maven would try to download it. -->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>org.apache.maven.plugins</groupId>
+										<artifactId>maven-antrun-plugin</artifactId>
+										<versionRange>[1.0.0,)</versionRange>
+										<goals>
+											<goal>run</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<execute>
+											<runOnIncremental>true</runOnIncremental>
+										</execute>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+
+			<plugin>
+				<!-- enable tycho build extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<!-- enable tycho packaging extension -->
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<strictVersions>false</strictVersions>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<source>${compiler}</source>
+					<target>${compiler}</target>
+					<compilerArgument>-err:-forbidden,discouraged,deprecation</compilerArgument>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<pomDependencies>consider</pomDependencies>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+</project>
