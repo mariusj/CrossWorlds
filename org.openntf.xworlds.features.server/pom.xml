@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.openntf.xworlds</groupId>
+        <artifactId>org.openntf.xworlds.build</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../org.openntf.xworlds.build/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>org.openntf.xworlds.features.server</artifactId>
+    <packaging>esa</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.aries</groupId>
+                <artifactId>esa-maven-plugin</artifactId>
+                <version>1.0.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <subsystemManifestFile>${basedir}/OSGI-INF/SUBSYSTEM.MF</subsystemManifestFile>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.openntf.xworlds</groupId>
+            <artifactId>org.openntf.xworlds.dominodeps</artifactId>
+            <version>9.0.1-SNAPSHOT</version>
+            <type>eclipse-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openntf.xworlds</groupId>
+            <artifactId>org.openntf.xworlds.oda</artifactId>
+            <version>3.0.0-SNAPSHOT</version>
+            <type>eclipse-plugin</type>
+        </dependency>
+        <dependency>
+            <groupId>org.openntf.xworlds</groupId>
+            <artifactId>org.openntf.xworlds.core</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <type>eclipse-plugin</type>
+        </dependency>
+    </dependencies>
+    
+</project>

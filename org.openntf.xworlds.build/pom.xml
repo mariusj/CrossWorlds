@@ -11,7 +11,7 @@
 		<module>../org.openntf.xworlds.dominodeps</module>
 		<module>../org.openntf.xworlds.oda</module>
 		<module>../org.openntf.xworlds.core</module>
-		<!-- <module>../org.openntf.xworlds.features.server</module> -->
+		<module>../org.openntf.xworlds.features.server</module>
 	</modules>
 
 	<properties>

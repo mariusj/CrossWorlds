@@ -279,5 +279,5 @@ IBM-API-Package: com.google.common.annotations,
  org.openntf.xworlds.core,
  org.openntf.xworlds.appservers.webapp.security,
  org.openntf.xworlds.xots
-Subsystem-Content: org.openntf.xworlds.dominodeps;version=2.0.1,
- org.openntf.xworlds.oda;version=2.0.1
+Subsystem-Content: org.openntf.xworlds.dominodeps,
+ org.openntf.xworlds.oda
