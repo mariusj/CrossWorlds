@@ -1,64 +1,19 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1422718817653
-Build-Jdk: 1.7.0_15
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: org.openntf.xworlds.dominodeps
+Bundle-Name: org.openntf.xworlds.dominodeps
+Bundle-Version: 9.0.1
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Built-By: Daniele Vistalli
 Bundle-Creator: Factor-y S.r.l.
 Bundle-Vendor: OpenNTF Org
-Bundle-ClassPath: BundleContent/com.ibm.icu_3.8.1.v20120530.jar,
- BundleContent/com.ibm.icu.base_3.8.1.v20080530.jar,
- BundleContent/lwpd.commons.jar,
- BundleContent/lwpd.domino.napi.jar,
- BundleContent/Notes.jar,
- META-INF/
-Export-Package: com.ibm.commons,
- com.ibm.commons.log,
- com.ibm.commons.log.jdk,
- com.ibm.commons.platform,
- com.ibm.commons.preferences,
- com.ibm.commons.preferences.eclipse,
- com.ibm.commons.util,
- com.ibm.commons.util.io,
- com.ibm.commons.util.io.base64,
- com.ibm.commons.util.io.json,
- com.ibm.commons.util.io.json.parser,
- com.ibm.commons.util.io.json.util,
- com.ibm.commons.util.print,
- com.ibm.commons.util.profiler,
- com.ibm.designer.domino.napi,
- com.ibm.designer.domino.napi.design,
- com.ibm.designer.domino.napi.dxl,
- com.ibm.designer.domino.napi.struct,
- com.ibm.designer.domino.napi.util,
- com.ibm.domino.napi,
- com.ibm.domino.napi.c,
- com.ibm.domino.napi.c.callback,
- com.ibm.domino.napi.c.data,
- com.ibm.domino.napi.c.html,
- com.ibm.domino.napi.c.ref,
- com.ibm.domino.napi.c.ssl,
- com.ibm.domino.napi.c.struct,
- com.ibm.domino.napi.c.util,
- com.ibm.domino.napi.c.xsp,
- com.ibm.domino.napi.internal.c,
- com.ibm.domino.napi.ssl,
- com.ibm.domino.napi.util,
- com.ibm.icu.impl,
- com.ibm.icu.impl.data,
- com.ibm.icu.impl.duration,
- com.ibm.icu.impl.duration.impl,
- com.ibm.icu.lang,
- com.ibm.icu.math,
- com.ibm.icu.text,
- com.ibm.icu.util,
- com.ibm.sslight,
- com.ibm.sslight.tools,
- lotus.domino,
- lotus.domino.corba,
- lotus.domino.corba.NameAndObjectUPackage,
- lotus.domino.cso,
- lotus.domino.local,
- lotus.domino.util
-Provide-Package: Acme,
+Bundle-ClassPath: lib/com.ibm.icu_3.8.1.v20120530.jar,
+ lib/com.ibm.icu.base_3.8.1.v20080530.jar,
+ lib/lwpd.commons.jar,
+ lib/lwpd.domino.napi.jar,
+ lib/Notes.jar
+Import-Package: org.omg.CORBA
+Export-Package: Acme,
  Acme.JPM.Encoders,
  com.ibm.commons,
  com.ibm.commons.extension,
@@ -137,7 +92,3 @@ Provide-Package: Acme,
  lotus.priv.CORBA.iiop.sslight,
  lotus.priv.CORBA.java.Exception,
  lotus.priv.CORBA.portable
-Bundle-SymbolicName: org.openntf.xworlds.dominodeps
-Bundle-Version: 9.0.1
-Bundle-Name: org.openntf.xworlds.dominodeps
-Import-Package: org.omg.CORBA

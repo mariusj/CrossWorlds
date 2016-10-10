@@ -17,33 +17,29 @@
 	<build>
 		<resources>
 			<resource>
-				<filtering>true</filtering>
 				<directory>${notes.path}/jvm/lib/ext/</directory>
-				<targetPath>${project.basedir}/BundleContent</targetPath>
+				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>Notes.jar</include>
 				</includes>
 			</resource>
 			<resource>
-				<filtering>true</filtering>
 				<directory>${notes.path}/osgi/shared/eclipse/plugins/com.ibm.domino.napi_9.0.1.20131004-1200</directory>
-				<targetPath>${project.basedir}/BundleContent</targetPath>
+				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>lwpd.domino.napi.jar</include>
 				</includes>
 			</resource>
 			<resource>
-				<filtering>true</filtering>
 				<directory>${notes.path}/osgi/shared/eclipse/plugins/com.ibm.commons_9.0.1.20131004-1200/</directory>
-				<targetPath>${project.basedir}/BundleContent</targetPath>
+				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>lwpd.commons.jar</include>
 				</includes>
 			</resource>
 			<resource>
-				<filtering>true</filtering>
 				<directory>${notes.path}/osgi/rcp/eclipse/plugins</directory>
-				<targetPath>${project.basedir}/BundleContent</targetPath>
+				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>com.ibm.icu.base_3.8.1.v20080530.jar</include>
 					<include>com.ibm.icu_3.8.1.v20120530.jar</include>

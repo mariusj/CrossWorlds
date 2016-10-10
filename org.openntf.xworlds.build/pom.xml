@@ -20,7 +20,7 @@
 		<tycho.extras.version>${tycho-version}</tycho.extras.version>
 		<compiler>1.8</compiler>
 		<notes.path>c:/Lotus/Notes</notes.path>
-		<oda>c:/_work/_GIT/oda_mj/domino/org.openntf.domino.updatesite/target/site/plugins</oda>
+		<oda.path>c:/_work/_GIT/oda_mj</oda.path>
 	</properties>
 
 	<build>
@@ -59,6 +59,18 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>3.0.1</version>
+					<configuration>
+						<nonFilteredFileExtensions>
+							<nonFilteredFileExtension>jar</nonFilteredFileExtension>
+						</nonFilteredFileExtensions>
+					</configuration>
+				</plugin>
+
 			</plugins>
 		</pluginManagement>
 
@@ -70,9 +82,6 @@
 				<artifactId>tycho-maven-plugin</artifactId>
 				<version>${tycho-version}</version>
 				<extensions>true</extensions>
-				<configuration>
-					<pomDependencies>consider</pomDependencies>
-				</configuration>
 			</plugin>
 
 			<plugin>

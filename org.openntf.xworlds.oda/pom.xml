@@ -54,7 +54,7 @@
 						<configuration>
 							<excludeGroupIds>p2.eclipse-plugin</excludeGroupIds>
 							<excludeScope>provided</excludeScope>
-							<outputDirectory>${basedir}/BundleContent</outputDirectory>
+							<outputDirectory>${basedir}/lib</outputDirectory>
 						</configuration>
 					</execution>
 				</executions>
@@ -74,8 +74,8 @@
 						<configuration>
 							<target>
 								<!-- copy renamed files. -->
-								<copy todir="${project.basedir}/BundleContent">
-									<fileset dir="${oda}">
+								<copy todir="${project.basedir}/lib">
+									<fileset dir="${oda.path}/domino/org.openntf.domino.updatesite/target/site/plugins">
 										<include name="org.openntf.domino_3.0.0.*.jar" />
 										<include name="org.openntf.formula_3.0.0.*.jar" />
 									</fileset>
