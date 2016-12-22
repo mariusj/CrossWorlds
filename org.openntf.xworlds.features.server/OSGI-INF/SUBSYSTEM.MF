@@ -280,4 +280,6 @@ IBM-API-Package: com.google.common.annotations,
  org.openntf.xworlds.appservers.webapp.security,
  org.openntf.xworlds.xots
 Subsystem-Content: org.openntf.xworlds.dominodeps,
- org.openntf.xworlds.oda
+ org.openntf.xworlds.oda,
+ org.openntf.xworlds.core
+
