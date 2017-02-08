@@ -253,4 +253,4 @@ Import-Package: Acme,
  org.openntf.service,
  org.osgi.framework
 Require-Bundle: org.openntf.xworlds.dominodeps;bundle-version="9.0.1",
- org.openntf.xworlds.oda;bundle-version="3.0.0"
+ org.openntf.xworlds.oda;bundle-version="3.1.0"
