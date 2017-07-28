@@ -11,7 +11,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/javassist-3.18.2-SNAPSHOT.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/javolution-6.1.0-SNAPSHOT.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jsr305-1.0.0-SNAPSHOT.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.openntf.domino_3.1.0.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.openntf.formula_3.1.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.openntf.domino_3.2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/org.openntf.formula_3.2.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
