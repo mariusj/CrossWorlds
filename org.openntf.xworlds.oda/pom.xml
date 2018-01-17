@@ -11,14 +11,14 @@
 	</parent>
 
 	<artifactId>org.openntf.xworlds.oda</artifactId>
-	<version>3.1.0-SNAPSHOT</version>
+	<version>4.2.0-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.openntf.domino</groupId>
-			<artifactId>com.google.guava</artifactId>
-			<version>18.0.0-SNAPSHOT</version>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>23.4-jre</version>
 		</dependency>
 		<dependency>
 			<groupId>org.openntf.domino</groupId>
@@ -76,8 +76,8 @@
 								<!-- copy renamed files. -->
 								<copy todir="${project.basedir}/lib">
 									<fileset dir="${oda.path}/domino/org.openntf.domino.updatesite/target/site/plugins">
-										<include name="org.openntf.domino_3.1.0.*.jar" />
-										<include name="org.openntf.formula_3.1.0.*.jar" />
+										<include name="org.openntf.domino_4.2.0.*.jar" />
+										<include name="org.openntf.formula_4.2.0.*.jar" />
 									</fileset>
  									<mapper type="regexp" from="^(.*)_(\d\.\d\.\d)\.(.*)\.jar$$" to="\1_\2.jar" /> 
 								</copy>

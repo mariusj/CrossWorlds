@@ -20,7 +20,7 @@
 		<tycho.extras.version>${tycho-version}</tycho.extras.version>
 		<compiler>1.8</compiler>
 		<notes.path>c:/Lotus/Notes</notes.path>
-		<oda.path>d:/_work/_GIT/org.openntf.domino</oda.path>
+		<oda.path>d:/_work/_GIT/dominoapi</oda.path>
 	</properties>
 
 	<build>
