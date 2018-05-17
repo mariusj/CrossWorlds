@@ -38,7 +38,7 @@
 		<dependency>
 			<groupId>org.openntf.xworlds</groupId>
 			<artifactId>org.openntf.xworlds.oda</artifactId>
-			<version>3.2.0-SNAPSHOT</version>
+			<version>4.2.0-SNAPSHOT</version>
 			<type>eclipse-plugin</type>
 		</dependency>
 	</dependencies>
