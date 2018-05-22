@@ -11,7 +11,7 @@
 	</parent>
 
 	<artifactId>org.openntf.xworlds.oda</artifactId>
-	<version>4.2.0-SNAPSHOT</version>
+	<version>4.4.1-SNAPSHOT</version>
 	<packaging>eclipse-plugin</packaging>
 
 	<dependencies>
@@ -61,8 +61,8 @@
 								<!-- copy renamed files. -->
 								<copy todir="${project.basedir}/lib">
 									<fileset dir="${oda.path}/domino/org.openntf.domino.updatesite/target/site/plugins">
-										<include name="org.openntf.domino_4.4.1.*.jar" />
-										<include name="org.openntf.formula_4.4.1.*.jar" />
+										<include name="org.openntf.domino_${oda.version}.*.jar" />
+										<include name="org.openntf.formula_${oda.version}.*.jar" />
 									</fileset>
  									<mapper type="regexp" from="^(.*)_(\d\.\d\.\d)\.(.*)\.jar$$" to="\1_\2.jar" /> 
 								</copy>
