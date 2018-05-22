@@ -32,7 +32,7 @@
         <dependency>
             <groupId>org.openntf.xworlds</groupId>
             <artifactId>org.openntf.xworlds.dominodeps</artifactId>
-            <version>{domino.libversion}-SNAPSHOT</version>
+            <version>${domino.libversion}-SNAPSHOT</version>
             <type>eclipse-plugin</type>
         </dependency>
         <dependency>
