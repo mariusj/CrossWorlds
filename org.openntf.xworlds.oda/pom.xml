@@ -64,7 +64,7 @@
 										<include name="org.openntf.domino_${oda.version}.*.jar" />
 										<include name="org.openntf.formula_${oda.version}.*.jar" />
 									</fileset>
- 									<mapper type="regexp" from="^(.*)_(\d\.\d\.\d)\.(.*)\.jar$$" to="\1_\2.jar" /> 
+ 									<mapper type="regexp" from="^(.*)_(\d+\.\d\.\d)\.(.*)\.jar$$" to="\1_\2.jar" /> 
 								</copy>
 							</target>
 						</configuration>
