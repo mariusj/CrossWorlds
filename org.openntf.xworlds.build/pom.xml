@@ -19,7 +19,7 @@
 		<tycho-version>0.26.0</tycho-version>
 		<tycho.extras.version>${tycho-version}</tycho.extras.version>
 		<compiler>1.8</compiler>
-		<oda.version>4.4.1</oda.version>
+		<oda.version>10.0.1</oda.version>
 		<domino.libversion>9.0.1</domino.libversion>
 	</properties>
 
