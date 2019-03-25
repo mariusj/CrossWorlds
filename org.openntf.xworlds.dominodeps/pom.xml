@@ -24,14 +24,14 @@
 				</includes>
 			</resource>
 			<resource>
-				<directory>${notes.path}/framework/shared/eclipse/plugins/com.ibm.domino.napi_10.0.0.20180910-2143</directory>
+				<directory>${notes.path}/framework/shared/eclipse/plugins/com.ibm.domino.napi_10.0.1.20181128-2143</directory>
 				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>lwpd.domino.napi.jar</include>
 				</includes>
 			</resource>
 			<resource>
-				<directory>${notes.path}/framework/shared/eclipse/plugins/com.ibm.commons_10.0.0.20180910-2143</directory>
+				<directory>${notes.path}/framework/shared/eclipse/plugins/com.ibm.commons_10.0.1.20181128-2143</directory>
 				<targetPath>${project.basedir}/lib</targetPath>
 				<includes>
 					<include>lwpd.commons.jar</include>
