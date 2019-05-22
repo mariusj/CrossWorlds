@@ -7,7 +7,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Built-By: Daniele Vistalli
 Bundle-Creator: Factor-y S.r.l.
 Bundle-Vendor: OpenNTF Org
-Bundle-ClassPath: lib/com.ibm.icu_3.8.1.v20120530.jar,
+Bundle-ClassPath: lib/com.ibm.icu_56.1.0.v201601250100.jar,
  lib/com.ibm.icu.base_3.8.1.v20080530.jar,
  lib/lwpd.commons.jar,
  lib/lwpd.domino.napi.jar,

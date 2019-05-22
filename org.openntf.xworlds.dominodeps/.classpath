@@ -5,10 +5,10 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry exported="true" kind="lib" path="lib/com.ibm.icu_3.8.1.v20120530.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/com.ibm.icu.base_3.8.1.v20080530.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/lwpd.commons.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/lwpd.domino.napi.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/Notes.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/com.ibm.icu_56.1.0.v201601250100.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

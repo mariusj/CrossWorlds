@@ -6,7 +6,7 @@ Subsystem-Localization: OSGI-INF/l10n/xworlds
 Subsystem-SymbolicName: org.openntf.xworlds.server;visibility:=public
 Subsystem-Name: %name
 Subsystem-Description: %desc
-Subsystem-Version: 0.9.1.qualifier
+Subsystem-Version: 1.0.0.qualifier
 Subsystem-Type: osgi.subsystem.feature
 Subsystem-License: http://www.apache.org/licenses/LICENSE-2.0.html
 IBM-App-ForceRestart: install,uninstall
