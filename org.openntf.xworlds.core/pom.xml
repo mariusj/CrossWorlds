@@ -1,46 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<modelVersion>4.0.0</modelVersion>
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>org.openntf.xworlds</groupId>
-		<artifactId>org.openntf.xworlds.build</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../org.openntf.xworlds.build/pom.xml</relativePath>
-	</parent>
+  <parent>
+    <groupId>org.openntf.xworlds</groupId>
+    <artifactId>org.openntf.xworlds.build</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../org.openntf.xworlds.build/pom.xml</relativePath>
+  </parent>
 
-	<artifactId>org.openntf.xworlds.core</artifactId>
-	<packaging>eclipse-plugin</packaging>
+  <artifactId>org.openntf.xworlds.core</artifactId>
+  <packaging>eclipse-plugin</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.ibm.tools.target</groupId>
-			<artifactId>was-liberty</artifactId>
-			<version>LATEST</version>
-			<type>pom</type>
-			<scope>provided</scope>
-		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId>net.wasdev.maven.tools.targets</groupId> -->
-<!-- 			<artifactId>liberty-target</artifactId> -->
-<!-- 			<version>16.0.0.2</version> -->
-<!-- 			<type>pom</type> -->
-<!-- 			<scope>provided</scope> -->
-<!-- 		</dependency> -->
-		<dependency>
-			<groupId>org.openntf.xworlds</groupId>
-			<artifactId>org.openntf.xworlds.dominodeps</artifactId>
-			<version>${domino.libversion}-SNAPSHOT</version>
-			<type>eclipse-plugin</type>
-		</dependency>
-		<dependency>
-			<groupId>org.openntf.xworlds</groupId>
-			<artifactId>org.openntf.xworlds.oda</artifactId>
-			<version>${oda.version}-SNAPSHOT</version>
-			<type>eclipse-plugin</type>
-		</dependency>
-	</dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>net.wasdev.maven.tools.targets</groupId>
+      <artifactId>liberty-target</artifactId>
+      <version>19.0.0.4</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.openntf.xworlds</groupId>
+      <artifactId>org.openntf.xworlds.dominodeps</artifactId>
+      <version>${domino.libversion}-SNAPSHOT</version>
+      <type>eclipse-plugin</type>
+    </dependency>
+    <dependency>
+      <groupId>org.openntf.xworlds</groupId>
+      <artifactId>org.openntf.xworlds.oda</artifactId>
+      <version>${oda.version}-SNAPSHOT</version>
+      <type>eclipse-plugin</type>
+    </dependency>
+  </dependencies>
 
 </project>
